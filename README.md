@@ -13,7 +13,7 @@
 
 ## About the Project
 
->Using Inquirer, this CLI allows a user to enter departments, roles, and employees into a relational database, allowing previously entered infomation to be viewed in a clean and professional environment
+>Using Inquirer, this CLI allows a user to enter departments, roles, and employees into a relational database, allowing previously entered information to be viewed in a clean and professional environment
 
 ### Built With
 - JavaScript 

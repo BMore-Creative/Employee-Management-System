@@ -28,7 +28,9 @@ class DB {
   }
 
   addDepartment(department) {
-    return this.connection.promise().query("INSERT INTO department SET ?", department);
+    return this.connection
+      .promise()
+      .query("INSERT INTO department SET ?", department);
   }
 
   addRole(role) {
@@ -36,13 +38,19 @@ class DB {
   }
 
   createEmployee(employee) {
-    return this.connection.promise().query("INSERT INTO employee SET ?", employee);
+    return this.connection
+      .promise()
+      .query("INSERT INTO employee SET ?", employee);
   }
 
   updateEmployeeRole(employeeId, roleId) {
-    return this.connection.promise().query(
-      "UPDATE employee SET role_id = ? WHERE id = ?",
-      [roleId, employeeId]
-    );
+    return this.connection
+      .promise()
+      .query("UPDATE employee SET role_id = ? WHERE id = ?", [
+        roleId,
+        employeeId,
+      ]);
   }
 }
+
+module.exports = new DB(connection);

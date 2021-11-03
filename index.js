@@ -80,3 +80,7 @@ function init() {
     }
   });
 }
+
+function viewDepartments() {
+    
+}

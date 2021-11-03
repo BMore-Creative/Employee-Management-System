@@ -122,7 +122,7 @@ function addDepartment() {
     let name = res;
     db.addDepartment(name)
       .then(() =>
-        console.log(`New department, ${name.name}, added to the database`)
+        console.log(`--- New department, ${name.name}, added to the database ---`)
       )
       .then(() => init());
   });
@@ -153,7 +153,7 @@ function addRole() {
       },
     ]).then((role) => {
       db.addRole(role)
-        .then(() => console.log(`New role, ${role.title}, added to database`))
+        .then(() => console.log(`--- New role, ${role.title}, added to database ---`))
         .then(() => init());
     });
   });
@@ -217,7 +217,7 @@ function addEmployee() {
             })
             .then(() =>
               console.log(
-                `New employee, ${firstName} ${lastName}, added to database`
+                `--- New employee, ${firstName} ${lastName}, added to database ---`
               )
             )
             .then(() => init());
@@ -261,7 +261,7 @@ function updateEmployeeRole() {
         ])
           .then((res) => db.updateEmployeeRole(employeeId, res.roleId))
           .then(() =>
-            console.log(`Employee, ${first_name} ${last_name}, updated`)
+            console.log(`--- Employee updated ---`)
           )
           .then(() => init());
       });
@@ -270,6 +270,6 @@ function updateEmployeeRole() {
 }
 
 function quit() {
-    console.log("Thank you for using the Employee Management Tracker, have a great day!");
+    console.log("--- Thank you for using the Employee Management Tracker, have a great day! ---");
     process.exit();
 }
